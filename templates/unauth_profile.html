@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+<h2>Welcome to the Blog</h2>
+ 
+<h3>Hi {{ current_user.username }}</h3>
+ 
+
+
+{% block content %}
+<div class="sidenav">
+    <a href="#photos">Photos</a>
+    <a href="/explore">Explore</a>
+    <a href="/groups">Groups</a>
+    <a href="#dm">DM</a>
+</div>
+<div class="profile-main">
+    <div class="big-box">
+        <div class="info-box">
+
+            <div class="profile-pictur-box">
+                <img class="profile-avatar" src="{{url_for('static', filename='default.jpeg')}}">
+            </div>
+            <div class="small-info-box">
+                {% for item in values %}
+                    <h1>{{item.username}}</h1>
+                    
+                    <h3>gender {{item.gender}}</h3>
+                    <h3>website {{item.website}}</h3>
+                {% endfor %}
+            </div>
+            <div class="uesr-blog-posts-box">
+
+                <div class="posts-to-show-for-this-user">
+                    
+                    {% for items in user_posts %}
+                        <div>
+                            <h3>Date {{items.date}}</h3>
+                            <p>{{items.entry}}</p>
+                        </div>
+                    {% endfor %}
+                
+                </div>
+            </div>
+            <div class="profile-bio-box">
+                {% for item in values %}
+                    <p>{{item.bio}}</p>
+                {% endfor %}
+            </div>
+            <div class="followers">
+                
+                <h4>followers</h4>
+                <p>{{followers}}</p>
+            </div>
+            <div class="following">
+                <h4>following</h4>
+                <p>{{following}}</p>
+            </div>
+            <div class="post-number">
+                <h4>posts</h4>
+                <p>{{length_of_posts}}</p>
+            </div>
+            <div class="follow-button">
+                <form action="#" method="post">
+                    <button class="follow-button-button">follow</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

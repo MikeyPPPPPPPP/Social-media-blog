@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+<h2>Welcome to the Blog</h2>
+<html>
+    <head>
+        <title>Blog</title>
+    </head>
+    <body>
+    <h1>Blog</h1>
+        <div class="blogstuff">
+            <div>
+                {% block content %}
+                    {% for item in values %}
+                        <div class="blogstuff">
+                            <div>
+                                <h3>Date {{item.date}}</h3>
+                                <p>{{item.entry}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    
+                    
+                {% endblock %} 
+            </div>
+        </div>
+    </body>
+</html>

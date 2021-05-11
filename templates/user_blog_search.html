@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Search Your Posts</h1>
+<form action="#", method="POST">
+                    
+    <textarea id="Search" name="Search" rows="1" cols="23"></textarea>
+                    
+    <input type="submit" value="Submit">
+</form>
+
+
+    {% for item in values %}
+        <div class="blogstuff">
+            <div>
+                <h3>Date {{item.date}}</h3>
+                <p>{{item.entry}}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %} 

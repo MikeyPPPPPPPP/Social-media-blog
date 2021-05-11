@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+            header {
+                width: 100%;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                background: #232323;
+                color: #ccc;
+            }
+            .logo {
+                letter-spacing: 3px;
+            }
+            .nav {
+                display: flex;
+                
+                justify-content: space-around;
+                width: 30%;
+            }
+            .navlink {
+                list-style: none;
+                margin: 0;
+            }
+            .navlink a {
+                color: #ccc;
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+
+            .center-for-form {
+                background-color: rgb(194, 195, 247);
+                position: absolute;
+                right: 150px;  
+                width: 1500px;
+                height: 50em;
+                background: #eee;
+                top: 100px;
+                text-align: center;
+            }
+            
+
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        
+        
+    </head>
+    <body>
+        <header>
+            <h1 class="logo">BLOG</h1>
+            <ul class="nav">
+    
+                <li class="navlink"><a href="/">Home</a></li>
+                <li class="navlink"><a href="/add">Add</a></li>
+                <li class="navlink"><a href="/search">Search</a></li>
+            
+            </ul>
+        </header>
+        <div class="main">
+            <div class="center-for-form">
+                <form action="#" method="post">
+                    
+                    
+                    <label for="fname">gender</label><br>
+                    <input type="text" id="fname" name="fname" value="John"><br>
+                    <label for="lname">website</label><br>
+                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                    <h3>Bio</h3>
+                    <textarea id="Entry" name="Entry" rows="8" cols="40"></textarea>
+                    <input class="edit-profile-submit-button" type="submit" value="Submit">
+                    
+                </form>
+            </div>
+            
+
+            
+        </div>
+    </body>
+</html>

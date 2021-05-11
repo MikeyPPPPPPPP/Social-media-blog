@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="user-search-form-class">
+    <form action="#" method="post">
+        <label for="usersearch">Search user:</label>
+        <input type="search" id="usersearch" name="usersearch">
+    </form>
+</div>
+{% for item in values %}
+    <div class="blogstuff">
+        <div>
+            <a href="profile/{{item}}">{{item}}</a>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %} 

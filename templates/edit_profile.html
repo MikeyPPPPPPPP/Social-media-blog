@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="center-for-form">
+    <form action="#" method="POST" enctype="multipart/form-data">
+        
+        
+        <label for="fname">gender</label><br>
+        <input type="text" name="genderss"><br>
+        <label for="lname">website</label><br>
+        <input type="text" name="website"><br><br>
+        <h3>Bio</h3>
+        <textarea id="entry" name="entry" rows="8" cols="40"></textarea>
+        <h3>Profile Image</h3>
+        <input type="file" name="file">
+        <input class="edit-profile-submit-button" type="submit" value="Submit">
+        
+    </form>
+</div>
+{% endblock %} 
