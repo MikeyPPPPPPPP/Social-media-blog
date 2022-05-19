@@ -12,7 +12,7 @@ import base64
 
 
 --securety--
-    --sql injections - pramitrized variables with bound variabls
+    --sql injections - pramitrized querys with bound variabls
     --login brute forceing - 5 time login trys a user befor lockout
     --username & password enumration on login - if you get one wrong print the same error ("wrong login")
     --xss - filter input and encode output & use apropriat response headers (Content-Type)
