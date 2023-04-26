@@ -142,20 +142,13 @@ def blog():
         for data in Posts.query.all():
             if data.owner_id == found_user.id:
                 found_items.append(data)
-        ########################################################################################################################
-        
+
         for user in followers:
-            print(user)
             #gets the username in the followers tab
             found_user = UserModel.query.filter_by(username=user.follower_user).first()
             for data in Posts.query.all():
                 if data.owner_id == found_user.id:
                     found_items.append(data)
-            
-
-        ########################################################################################################################
-        
-        
 
         return render_template('blog.html', values=found_items)
     return render_template('home.html')
